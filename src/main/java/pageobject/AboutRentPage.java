@@ -21,7 +21,7 @@ public class AboutRentPage {
     //Кнопка подтверждения
     private By confirmationOrderButton;
 
-    public AboutRentPage(WebDriver driver){
+    public AboutRentPage(WebDriver driver) {
         this.driver = driver;
         this.whenScooterDeliveryField = By.xpath("//input[@placeholder = '* Когда привезти самокат']");
         this.rentPeriodField = By.xpath("//div[@class = 'Dropdown-control']");
@@ -32,34 +32,33 @@ public class AboutRentPage {
         this.confirmationOrderButton = By.xpath("//button[text()='Да']");
     }
 
-    //
-    public void choiceDateDelivery(){
+    public void choiceDateDelivery() {
         driver.findElement(whenScooterDeliveryField).click();
         driver.findElement(By.xpath("//div[@aria-label = 'Choose воскресенье, 25-е сентября 2022 г.']")).click();
     }
 
-    public void choiceRentPeriod(){
+    public void choiceRentPeriod() {
         driver.findElement(rentPeriodField).click();
         driver.findElement(By.xpath("//div[text()= 'трое суток']")).click();
     }
 
-    public void choiceBlackScooter(){
+    public void choiceBlackScooter() {
         driver.findElement(blackScooter).click();
     }
 
-    public void choiceGreyScooter(){
+    public void choiceGreyScooter() {
         driver.findElement(greyScooter).click();
     }
 
-    public void enterCommentForCourier(String comment){
+    public void enterCommentForCourier(String comment) {
         driver.findElement(commentForCourierField).sendKeys(comment);
     }
 
-    public void clickOrderButton(){
+    public void clickOrderButton() {
         driver.findElement(orderButton).click();
     }
 
-    public void clickConfirmationOrderButton(){
+    public void clickConfirmationOrderButton() {
         driver.findElement(confirmationOrderButton).click();
     }
 }

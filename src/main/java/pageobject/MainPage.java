@@ -8,7 +8,6 @@ import java.util.List;
 
 public class MainPage {
 
-
     private WebDriver driver;
     //собрал все ответы в массив
     private List<WebElement> answers;
@@ -18,7 +17,8 @@ public class MainPage {
     private WebElement upperOrderButton;
     //Нижняя кнопка "Заказать"
     private WebElement lowerOrderButton;
-public MainPage(WebDriver driver) {
+
+    public MainPage(WebDriver driver) {
         this.driver = driver;
         this.questions = driver.findElements(By.xpath("//div[@class = 'accordion__button']"));
         this.answers = driver.findElements(By.xpath("//div[@class = 'accordion__panel']"));
@@ -29,6 +29,7 @@ public MainPage(WebDriver driver) {
     public List<WebElement> getQuestions() {
         return questions;
     }
+
     public List<WebElement> getAnswers() {
         return answers;
     }
